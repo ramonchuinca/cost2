@@ -1,8 +1,9 @@
+import style from './Frase.module.css'
 function Frase () {
 
     return (
-        <div>
-          <h1> </h1>
+        <div className={style.fraseContainer}>
+          <h1> Que venha o ano novo cheio de coisas boas </h1>
         </div>
     )
 

@@ -18,8 +18,8 @@ function App() {
 
       < HelloWorld />
       < Frase />
-      < SayMyName nome= ""/>
-      <Pessoa nome/>
+      < SayMyName />
+      <Pessoa nome="chuinca" idade="30" profissao="programador" foto=""/>
       
       
       
