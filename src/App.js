@@ -1,30 +1,43 @@
-import './App.css';
-import HelloWorld from './components/HelloWorld'
-import Frase from './components/Frase'
-import SayMyName from './components/SayMyName'
-import Pessoa from './components/Pessoa';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Footer from './components/layout/Footer'
+import Navbar from './components/layout/Navbar'
+import Container from './components/layout/Container'
+import Home from './components/pages/Home'
+import Projects from './components/pages/Projects'
+import NewProject from './components/pages/NewProject'
+import Company from './components/pages/Company'
+import Contact from './components/pages/Contact'
+import Project from './components/pages/Project'
+
 function App() {
-
-
-  const url = "https://gifs.eco.br/wp-content/uploads/2021/12/imagens-de-feliz-ano-novo-gifs-de-feliz-ano-novo-imagens-animadas-com-frases-e-mensagens-4.gif"
-  
   return (
-    <div className="App">
-      <h1> Passando Pra Desejar Um Feliz Ano Novo </h1>
-      <img src={url} alt="" />
-
-
-
-
-      < HelloWorld />
-      < Frase />
-      < SayMyName />
-      <Pessoa nome="chuinca" idade="30" profissao="programador" foto=""/>
-      
-      
-      
-    </div>
-  );
+    <Router>
+      <Navbar />
+      <Switch>
+        <Container customClass="min-height">
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/Projects">
+            <Projects />
+          </Route>
+          <Route path="/Company">
+            <Company />
+          </Route>
+          <Route path="/Contact">
+            <Contact />
+          </Route>
+          <Route path="/NewProject">
+            <NewProject />
+          </Route>
+          <Route path="/Project/:id">
+            <Project />
+          </Route>
+        </Container>
+      </Switch>
+      <Footer />
+    </Router>
+  )
 }
 
-export default App;
+export default App

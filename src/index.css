@@ -1,8 +1,14 @@
-body{
-  padding: 50px;
-  background-color: aqua;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
-p{
-  background-color: yellow;
-  padding: 30px;
+
+html,
+body,
+#root {
+  background-color: whitesmoke;
+  height: 100%;
 }
+
